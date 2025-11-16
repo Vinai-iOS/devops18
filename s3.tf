@@ -22,6 +22,10 @@ versioning_configuration {
 status = "Enabled"
 }
 }
-
-
-
+terraform {
+backend "s3" {
+region = "eu-north-1"
+bucket = "vinaib1"
+key = "prod/terraform.tfstate"
+}
+}
